@@ -67,28 +67,29 @@ header {
 
 /* NAVBAR */
 nav {
-  background-color: #add8e6; /* baby blue */
-  overflow-x: auto;
-  white-space: nowrap;
+  background-color: #003366; /* same as header */
+  padding: 0.5rem;
   display: flex;
   justify-content: center;
-  padding: 10px 0;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 nav a {
-  display: inline-block;
-  color: #003366; /* dark blue */
-  text-align: center;
-  padding: 12px 16px;
+  background-color: #1574a8;
+  color: white;
+  padding: 10px 16px;
   text-decoration: none;
   font-size: 14px;
-  font-weight: bold;
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 5px;
+  background-color: white;
+  color: #003366;
   text-decoration: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
 /* PROFILE SECTION */
