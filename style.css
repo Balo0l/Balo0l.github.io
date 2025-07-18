@@ -79,8 +79,8 @@ nav a:hover {
 
 /* Profile picture */
 .profile-pic {
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #fff;
@@ -96,8 +96,8 @@ nav a:hover {
 }
 
 .icon-img-small {
-  width: 160px;
-  height: 160px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
 }
 
