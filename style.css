@@ -68,17 +68,18 @@ header {
 /* NAVBAR */
 nav {
   background-color: #003366; /* same as header */
-  padding: 0.5rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
 }
 
 nav a {
-  background-color: #1574a8;
+  display: inline-block;
   color: white;
+  background-color: #1574a8;
+  text-align: center;
   padding: 10px 16px;
+  margin: 6px 6px;
   text-decoration: none;
   font-size: 14px;
   border-radius: 20px;
@@ -89,8 +90,8 @@ nav a:hover {
   background-color: white;
   color: #003366;
   text-decoration: none;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
+
 
 /* PROFILE SECTION */
 .profile-container {
