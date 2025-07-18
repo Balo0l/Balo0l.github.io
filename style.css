@@ -7,9 +7,57 @@ body {
   color: #333;
 }
 
-/* HEADER */
+/* HEADER TITLE */
+.site-title {
+  font-family: Georgia, serif;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 1rem 0;
+  color: white;
+  background-color: #003366;
+}
+
+/* White separator under title */
+.separator-line {
+  height: 2px;
+  background-color: white;
+  margin: 0;
+}
+
+/* NAVBAR */
+nav {
+  background-color: #003366;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  display: inline-block;
+  background-color: #1574a8;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: white;
+  color: #003366;
+  text-decoration: none;
+}
+
+/* HEADER (PROFILE IMAGE + BOOK IMAGE) */
 header {
-  background: #003366; /* semi-dark blue */
+  background: #003366;
   color: #fff;
   padding: 2rem 2rem 1rem 2rem;
   display: flex;
@@ -34,6 +82,20 @@ header {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Icon links under profile picture */
+.icon-links-below {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.icon-img-small {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* Bio text next to profile */
 .bio-text {
   max-width: 500px;
 }
@@ -65,34 +127,6 @@ header {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
 
-/* NAVBAR */
-nav {
-  background-color: #003366; /* same as header */
-  overflow-x: auto;
-  white-space: nowrap;
-  padding: 0.5rem 1rem;
-}
-
-nav a {
-  display: inline-block;
-  color: white;
-  background-color: #1574a8;
-  text-align: center;
-  padding: 10px 16px;
-  margin: 6px 6px;
-  text-decoration: none;
-  font-size: 14px;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-}
-
-nav a:hover {
-  background-color: white;
-  color: #003366;
-  text-decoration: none;
-}
-
-
 /* PROFILE SECTION */
 .profile-container {
   display: flex;
@@ -106,7 +140,7 @@ nav a:hover {
 
 .profile-left {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   flex: 1;
   gap: 20px;
@@ -137,7 +171,7 @@ nav a:hover {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* GENERAL ELEMENT STYLES */
+/* GENERAL STYLES */
 .info p {
   margin: 4px 0;
 }
