@@ -2,81 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dr. Ehab Alshaer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr. Ehab Alshaer - Professional Website</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
-    <img src="profile.jpg" alt="Profile photo" class="profile-pic">
-    <div class="info">
-      <h1>Dr. Ehab Alshaer</h1>
-      <p><strong>Distinguished Research Fellow</strong></p>
-      <p>Institute of Software Research (ISR) and Faculty Member of CyLab,</p>
-      <p>School of Computer Science</p>
-      <p>Carnegie Mellon University</p>
-      <br>
-      <p><strong>Office:</strong> TCS Building, Office# 423, Pittsburgh, PA</p>
-      <p><strong>Office Phone:</strong> (412) 268-7899</p>
-      <p><strong>Email:</strong> &lt;Ehab&gt;@cmu.edu</p>
-    </div>
+    <h1>Dr. Ehab Alshaer</h1>
+    <nav>
+      <a href="#bio">Biography</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#honors">Honors</a>
+      <a href="#accomplishments">Accomplishments</a>
+      <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
+      <a href="https://dl.acm.org" target="_blank">ACM DL</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#bio">Biography</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <section class="profile">
+    <img src="profile.jpg" alt="Dr. Ehab Alshaer">
+    <div class="info">
+      <p><strong>Distinguished Research Fellow</strong></p>
+      <p>Institute of Software Research (ISR) and Faculty Member of CyLab,<br>
+      School of Computer Science<br>
+      Carnegie Mellon University</p>
+      <p><strong>Office:</strong> TCS Building, Office# 423, Pittsburgh, PA</p>
+      <p><strong>Office Phone:</strong> (412) 268-7899</p>
+      <p><strong>Email:</strong> ehab@cmu.edu</p>
+    </div>
+  </section>
 
-  <main>
-    <section id="bio">
-  <h2>Biography</h2>
-  <p><strong>Biography:</strong> Dr. Al-Shaer is a Distinguished Research Fellow at Institute of Software Research (ISR) in the School of Computer Science and Faculty Member of CyLab at Carnegie Mellon University. Dr. Al-Shaer has more than two decades as a researcher and educators in the field of Cybersecurity. Prior joining ISR/CMU, Prof. Al-Shaer was a Distinguished Career Professor at Information Networking Institute (INI) at Carnegie Mellon University and he was a Professor and the Founding Director of CyberDNA and NSF Cybersecurity Analytics and Automation (CCAA) centers in the University of North Carolina Charlotte from 2009–2020.</p>
+  <section id="bio">
+    <h2>Biography</h2>
+    <p>Dr. Al-Shaer is a Distinguished Research Fellow at Institute of Software Research (ISR) in the School of Computer Science and Faculty Member of CyLab at Carnegie Mellon University. Dr. Al-Shaer has more than two decades as a researcher and educator in the field of Cybersecurity. Prior to joining ISR/CMU, Prof. Al-Shaer was a Distinguished Career Professor at the Information Networking Institute (INI) at Carnegie Mellon University and was a Professor and the Founding Director of CyberDNA and NSF Cybersecurity Analytics and Automation (CCAA) centers at the University of North Carolina Charlotte from 2009–2020.</p>
+    <p>His research expertise includes:
+    <ol>
+      <li>Formal methods for security configuration verification, synthesis and hardening of enterprise, SDN, IoT and smart grid systems.</li>
+      <li>Adaptive & automated cyber defense.</li>
+      <li>Cyber and cyber-physical resilience.</li>
+      <li>Data-driven cybersecurity analytics.</li>
+      <li>Cyber agility for attack deterrence and deception.</li>
+    </ol></p>
+    <p>Dr. Al-Shaer has published over 200 refereed papers, edited 9+ books/chapters, and graduated 14 PhD students. He was designated a DoD SME in 2011, awarded IBM Faculty Award in 2012 and UNC Charlotte Faculty Research Award in 2013. He has received over $20M in funding from agencies and industry partners.</p>
+  </section>
 
-  <p>His area of research expertise includes (1) formal methods for security configuration verification, synthesis and hardening of enterprise, SDN, IoT and smart grid systems, (2) adaptive & automated cyber defense, (3) cyber and cyber-psychical resilience, (4) data-driven cybersecurity analytics, and (5) cyber agility for attack deterrence and deception. Dr. Al-Shaer has edited/co-edited more than 9 books and book chapters, published more than 200 refereed journals and conference papers in his area, and graduated more than 14 PhD students, who are working as tenure/tenure-track professors in academic institutions and researchers in industry labs.</p>
+  <section id="research">
+    <h2>Research</h2>
+    <p>Research interests include cybersecurity analytics, automation, formal verification, SDN/IoT security, and cyber defense strategies.</p>
+  </section>
 
-  <p>He was designated by the Department of Defense (DoD) as a Subject Matter Expert (SME) on security analytics and automation in 2011, and he was awarded the IBM Faculty Award in 2012, and UNC Charlotte Faculty Research Award in 2013. During his academic career, Prof. Al-Shaer received more than $20M research funding from government agencies including NSF, NSA, DARPA, ARO, ARL, AFRL, ONR, and industry including IBM, Cisco, Intel, Bank of America, Wells Fargo, BB&T, DTCC, Duke Energy, CIS, RTI, and others.</p>
+  <section id="publications">
+    <h2>Publications</h2>
+    <input type="text" placeholder="Filter by keyword..." id="keyword">
+    <button onclick="alert('Keyword filtering not implemented')">Search</button>
+    <p>Publications available via <a href="https://scholar.google.com" target="_blank">Google Scholar</a>.</p>
+  </section>
 
-  <p>Dr. Al-Shaer was the ARO Autonomous Cyber Deception Workshop in 2018, General Chair of ACM Computer and Communication in 2009 and 2010, NSF Workshop in Assurable and Usable Security Configuration in 2008. Dr. Al-Shaer was also the Program Committee Chair for many conferences and workshops including ACM/IEEE SafeConfig 2013 and 2015, IEEE Integrated Management (IM) 2007, IEEE POLICY 2008. Al-Shaer has two accepted patents and several submitted ones. He also has led several technology transfer projects. He is also an advisory board member for leading companies in cybersecurity automation.</p>
-</section>
+  <section id="honors">
+    <h2>Honors and Recognition</h2>
+    <ul>
+      <li>Featured as DoD Subject Matter Expert in Cybersecurity Configuration Analytics and Automation, 2011.</li>
+      <li>Received IBM Research Faculty Award, 2013.</li>
+      <li>Faculty Research University Award at UNC Charlotte, 2014.</li>
+      <li>ACM and IEEE Distinguished Service Professional Awards (multiple years).</li>
+      <li>Old Dominion University Distinguished Alumni Award, 2003.</li>
+      <li>NASA Scholarship during PhD, 1995–1998.</li>
+    </ul>
+  </section>
 
-    <section id="research">
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Cybersecurity analytics and threat detection</li>
-        <li>AI for automated cyber defense</li>
-        <li>Formal methods for system verification</li>
-        <li>Byzantine fault-tolerant systems</li>
-      </ul>
-    </section>
-
-    <section id="publications">
-      <h2>Selected Publications</h2>
-      <ul>
-        <li>Alshaer, E. "Securing Smart Grids Using Adaptive Analytics." *IEEE Transactions*, 2023.</li>
-        <li>Alshaer, E. "Machine Learning for Cyber Resilience." *ACM CCS*, 2022.</li>
-      </ul>
-    </section>
-
-    <section id="teaching">
-      <h2>Teaching</h2>
-      <ul>
-        <li>CS401 - Network Security (Fall 2025)</li>
-        <li>CS305 - Introduction to Cybersecurity (Spring 2025)</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: &lt;Ehab&gt;@cmu.edu</p>
-      <p>Office Hours: Tue/Thu 2–4 PM</p>
-      <p>Location: Room 423, TCS Building</p>
-    </section>
-  </main>
+  <section id="accomplishments">
+    <h2>Accomplishment Highlights</h2>
+    <ul>
+      <li>Published 9 books and 230+ refereed publications.</li>
+      <li>Three patents and many technology transfer projects.</li>
+      <li>Founding PI for two major NSF centers at UNCC.</li>
+      <li>Secured ~$20M research funding; PI for $11M of it.</li>
+      <li>Led projects with AFRL, Cisco, Intel, Duke Energy, etc.</li>
+      <li>Graduated 14 PhD students; 6 are tenure-track professors.</li>
+    </ul>
+  </section>
 
   <footer>
-    &copy; 2025 Dr. Ehab Alshaer — All rights reserved.
+    <p>&copy; 2025 Dr. Ehab Alshaer. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
