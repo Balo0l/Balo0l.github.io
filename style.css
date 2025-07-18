@@ -59,20 +59,21 @@ nav a:hover {
 /* PROFILE SECTION CONTAINER */
 .profile-container {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 30px;
   padding: 40px;
   background-color: #f5f5f5;
+  flex-wrap: wrap;
 }
+
 
 /* LEFT SIDE OF PROFILE */
 .profile-left {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1;
+  flex: 0 0 200px;
   gap: 20px;
 }
 
@@ -95,19 +96,23 @@ nav a:hover {
 }
 
 .icon-img-small {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
 }
+
 
 
 /* Text beside profile */
 .profile-text {
   font-size: 16px;
   line-height: 1.6;
-  max-width: 500px;
+  max-width: 400px;
+  flex: 1;
+  margin-left: 20px;
   text-align: left;
 }
+
 
 .profile-text a {
   color: #007acc;
@@ -116,11 +121,12 @@ nav a:hover {
 
 /* RIGHT SIDE (books image) */
 .profile-right {
-  flex: 1;
+  flex: 0 0 300px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 
 .books-image {
   max-width: 100%;
