@@ -121,13 +121,11 @@
     function searchGoogleScholar() {
       const keyword = document.getElementById("keyword").value.trim();
       if (keyword) {
-        // Dr. Alshaer's scholar profile ID
-        const userId = "3ewd8VwAAAAJ";
+        const userId = "3ewd8VwAAAAJ";  // Dr. Alshaer's Google Scholar ID
+        const baseUrl = `https://scholar.google.com/citations?hl=en&user=${userId}&search_query=`;
         const query = encodeURIComponent(keyword);
-        const url = `https://scholar.google.com/citations?view_op=search_authors&mauthors=${query}&hl=en&user=${userId}`;
-        const fallbackUrl = `https://scholar.google.com/scholar?hl=en&q=${query}+Ehab+Alshaer`;
-        // Redirect to fallback for actual article matches by this author
-        window.open(fallbackUrl, "_blank");
+        const fullUrl = baseUrl + query;
+        window.open(fullUrl, "_blank");
       } else {
         alert("Please enter a keyword to search.");
       }
