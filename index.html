@@ -118,26 +118,18 @@
     <p>&copy; 2025 Dr. Ehab Alshaer. All rights reserved.</p>
   </footer>
    <script>
-  function searchGoogleScholar() {
-    const keyword = document.getElementById("keyword").value.trim();
-    if (keyword) {
-      const userId = "3ewd8VwAAAAJ";  // Dr. Alshaer's Google Scholar ID
-      const baseUrl = `https://scholar.google.com/citations?hl=en&user=${userId}&search_query=`;
-      const query = encodeURIComponent(keyword);
-      const fullUrl = baseUrl + query;
-      window.open(fullUrl, "_blank");
-    } else {
-      alert("Please enter a keyword to search.");
-    }
+function searchGoogleScholar() {
+  const keyword = document.getElementById("keyword").value.trim();
+  if (keyword) {
+    const userId = "3ewd8VwAAAAJ";  // Dr. Alshaer's Google Scholar ID
+    const baseUrl = `https://scholar.google.com/citations?hl=en&user=${userId}&search_query=`;
+    const query = encodeURIComponent(keyword);
+    const fullUrl = baseUrl + query;
+    window.open(fullUrl, "_blank");
+  } else {
+    alert("Please enter a keyword to search.");
   }
-  
-  // Add Enter key support
-  document.getElementById("keyword").addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-      event.preventDefault(); // Prevent form submission if in a form
-      searchGoogleScholar();
-    }
-  });
+}
   </script>
 
 </body>
