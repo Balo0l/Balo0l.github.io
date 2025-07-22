@@ -86,7 +86,7 @@
   <section id="publications">
     <h2>Publications</h2>
     <input type="text" placeholder="Filter by keyword..." id="keyword">
-    <button onclick="alert('Keyword filtering not implemented')">Search</button>
+    <button onclick="searchGoogleScholar()">Search</button>
     <p>Publications available via <a href="https://scholar.google.com" target="_blank">Google Scholar</a>.</p>
   </section>
 
@@ -117,6 +117,20 @@
   <footer>
     <p>&copy; 2025 Dr. Ehab Alshaer. All rights reserved.</p>
   </footer>
+
+  <script>
+  function searchGoogleScholar() {
+    const keyword = document.getElementById("keyword").value.trim();
+    if (keyword) {
+      const baseURL = "https://scholar.google.com/scholar?q=";
+      const query = encodeURIComponent("author:\"Ehab Alshaer\" " + keyword);
+      window.open(baseURL + query, "_blank");
+    } else {
+      alert("Please enter a keyword to search.");
+    }
+  }
+</script>
+
 
 </body>
 </html>
