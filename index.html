@@ -84,12 +84,14 @@
   </section>
 
   <section id="publications">
-    <h2>Publications</h2>
+  <h2>Publications</h2>
+  <form onsubmit="searchGoogleScholar(); return false;">
     <input type="text" placeholder="Filter by keyword..." id="keyword">
-    <button onclick="searchGoogleScholar()">Search</button>
-    <input type="text" placeholder="Filter by keyword..." id="keyword" onkeypress="if(event.key === 'Enter') searchGoogleScholar()">
-    <p>Publications available via <a href="https://scholar.google.com" target="_blank">Google Scholar</a>.</p>
-  </section>
+    <button type="submit">Search</button>
+  </form>
+  <p>Publications available via <a href="https://scholar.google.com" target="_blank">Google Scholar</a>.</p>
+</section>
+
 
   <section id="honors">
     <h2>Honors and Recognition</h2>
