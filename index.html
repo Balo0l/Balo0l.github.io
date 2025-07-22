@@ -124,7 +124,7 @@
     function searchGoogleScholar() {
       const keyword = document.getElementById("keyword").value.trim();
       if (keyword) {
-        const author = '"Ehab Alshaer"';
+        const author = 'Ehab Alshaer';
         const query = encodeURIComponent(`${author} ${keyword}`);
         const searchUrl = `https://scholar.google.com/scholar?q=${query}`;
         window.open(searchUrl, "_blank");
