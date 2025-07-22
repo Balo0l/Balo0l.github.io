@@ -117,20 +117,17 @@
   <footer>
     <p>&copy; 2025 Dr. Ehab Alshaer. All rights reserved.</p>
   </footer>
-
   <script>
-  function searchGoogleScholar() {
-    const keyword = document.getElementById("keyword").value.trim();
-    if (keyword) {
-      const baseURL = "https://scholar.google.com/scholar?q=";
-      const query = encodeURIComponent("author:\"Ehab Alshaer\" " + keyword);
-      window.open(baseURL + query, "_blank");
-    } else {
-      alert("Please enter a keyword to search.");
+    function searchGoogleScholar() {
+      const keyword = document.getElementById("keyword").value.trim();
+      if (keyword) {
+        const baseURL = "https://scholar.google.com/scholar?q=";
+        const query = encodeURIComponent('author:"Ehab Alshaer" ' + keyword);
+        window.open(baseURL + query, "_blank");
+      } else {
+        alert("Please enter a keyword to search.");
+      }
     }
-  }
-</script>
-
-
+  </script>
 </body>
 </html>
