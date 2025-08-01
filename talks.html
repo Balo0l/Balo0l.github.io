@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Talks and Panels - Dr. Ehab Alshaer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#keynote">Keynote</a></li>
+      <li><a href="#invited-talks">Invited Talks & Government Briefing</a></li>
+      <li><a href="#panelist">Invited Panelist</a></li>
+      <li><a href="#tutorials">Tutorial Presentations</a></li>
+      <li><a href="#tech-transfer">Technology Transfer</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Title -->
+  <header>
+    <h1>Talks and Panels</h1>
+  </header>
+
+  <!-- Keynote Section -->
+  <section id="keynote">
+    <h2>Keynote</h2>
+    <p>Details about keynote speeches will be listed here.</p>
+  </section>
+
+  <!-- Invited Talks & Government Briefing Section -->
+  <section id="invited-talks">
+    <h2>Invited Talks & Government Briefing</h2>
+    <p>Details about invited talks and briefings will be listed here.</p>
+  </section>
+
+  <!-- Invited Panelist Section -->
+  <section id="panelist">
+    <h2>Invited Panelist</h2>
+    <p>Details about panelist participation will be listed here.</p>
+  </section>
+
+  <!-- Tutorial Presentations Section -->
+  <section id="tutorials">
+    <h2>Tutorial Presentations</h2>
+    <p>Details about tutorial presentations will be listed here.</p>
+  </section>
+
+  <!-- Technology Transfer Section -->
+  <section id="tech-transfer">
+    <h2>Technology Transfer</h2>
+    <p>Details about technology transfer will be listed here.</p>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button onclick="topFunction()" id="topBtn" title="Go to top">↑</button>
+
+  <script>
+    // Back to Top functionality
+    let topBtn = document.getElementById("topBtn");
+    window.onscroll = function() {
+      topBtn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+    };
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
