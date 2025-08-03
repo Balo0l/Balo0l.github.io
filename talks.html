@@ -13,40 +13,67 @@
 
   <!-- Projects Navigation Bar -->
   <nav class="custom-navbar">
-    <a href="#auto-verification">Keynote, Invited Talks and Government Briefing</a>
-    <a href="#data-analytics">Data-driven Cybersecurity Analytics</a>
-    <a href="#cyber-physical">Security for Cyber-Physical Systems</a>
-    <a href="#agility">Cyber Agility</a>
-    <a href="#resilience">Cyber Resilience Automation</a>
-    <a href="#tools">Software Tools</a>
+    <a href="#keynote">Keynote, Invited Talks and Government Briefing</a>
+    <a href="#invited-panel">Invited Panelist</a>
+    <a href="#tutorial">Tutorial Presentations</a>
+    <a href="#tech-transfer">Technology Transfer</a>
   </nav>
 
   <!-- Projects Sections -->
 
-  <section id="auto-verification">
-    <h2>1. Automated Verification & Synthesis of Security Configuration</h2>
+  <section id="keynote">
+    <h2>Keynote, Invited Talks and Government Briefing</h2>
     <div class="project">
-      <p>Professor Al-Shaer has a long standing record of leading a number projects in modeling complex cyber systems based on their configuration and verifying its behavior according to safety or liveness security and resiliency properties. Our model finding approach can analyze millions of highly interdependent system configurations, device logs, or sensor measurements, and construct a deterministic or probabilistic model checker for analyzing critical properties. Prof. Al-Shaer has developed novel models based on Binary Decision Diagrams, SAT, Satisfiability Modulo Theories, and stochastic model checking to represent cyber and cyber-physical configurations (e.g., access control rules) of large-scale enterprises and SDN, Clouds, WSN, advanced metering infrastructure, and Energy Management Systems. Developing a formal model that is accurate, canonical, and scalable is a key challenge that we addressed in this research. The following are selected projects in this area:</p>
-      <h3>1.1. Configuration Verification</h3>
-      <h4>(a) ConfigChecker-- Security configuration analytics for large-scale enterprises [INFOCOM04, JSAC06, ICNP05, ICNP09, SafeConfig10-13, SafeConfig16]:</h4>
-      <p>Network systems contain thousands of devices such as routers firewalls, IPSec devices, intrusion detection and prevention systems, wireless access points, virtual machines, and end hosts that comprise millions of configuration parameters (e.g., rules). Although these devices are configured in isolation, their configurations are often interdependent which complicates the enforcement validation of the global security properties in cyber systems. This inherent complexity of cyber configuration significantly increases human errors and makes devices misconfigurations, policy inconsistency, security violations highly likely. It has been widely reported that many security breaches are mainly due to misconfigurations in the network. “It is estimated that configuration errors enable 65% of cyber-attacks and cause 62% of infrastructure downtime”, Network World, July 2006.</p>
-      <p>To address these challenges, we developed a novel formal approach that models the global network behavior based on the access control configurations of routers, IPSec, firewalls, NAT, IDS, wireless access points and end-host access controls. We model the semantics of access control policies using Binary Decision Diagrams (BDDs) and then use computation tree logic (CTL) and symbolic model checking to verify network reachability and security requirements. We have implemented our approach in a tool called ConfigChecker that can scale to thousands of devices and millions of configuration rules [ICNP09, Safeconfig12, Safeconfig13]. A novel taxonomy of policy conflicts and misconfiguration for firewalls and IPSec devices with soundness and completeness proof have also been presented [ICNP05, COMMAG06].</p>
-      <h4>(b) SDNChecker-- Security configuration analytics for SDN [SafeConfig16]:</h4>
-      <p>In this project, we developed an SMT-based bounded model checking framework and tools, called SDNChecker, to verify Openflow in software defined network’s data plane with a high-level enterprise security policy. The SDNChecker framework models the Openflow switch internal pipeline processing and captures packet transformation and forwarding both internally (i.e., across multiple flow tables), and externally (i.e., across different switches). SDNChecker provides a high-level interface to (1) express a wide range of network properties as temporal expressions based on LTL, and (2) define special-purpose variables as arithmetic relations, such as aggregation functions that will be considered by the model checker to monitor the system state based on user-defined properties. SDNChecker has the flexibility to verify any general reachability, security, and resiliency properties. We demonstrated many case studies for discovering conflicts, and verifying network reachability with guaranteed quality of service, and risk-aware policies constraints. In our performance evaluation, we show that SDNChecker can scale to Openflow networks of thousands of nodes (switches) and hundreds of thousands of rules.</p>
-      <h4>(c) CloudChecker-- Security configuration analytics for the cloud [SCC13-1, SCC13-2]:</h4>
-      <p>In this project, we developed a risk-aware access control technique that effectively allows for the enforcement of fine-grain isolation and defense-in-depth in cloud. Our approach involves two key techniques: (1) security-aware resource allocation of VMs such that each VM will be assigned to the security groups according to their risk exposure and induced impact, and (2) risk-aware VM placement planning that reduces global residual risk in the cloud. As risk can be dynamically changed, the VM placement and group assignment should also be adaptive. Thus to provide adaptive access control configuration, we developed provably-safe VM Migration Planning technique that guarantees valid VM migration sequence that satisfies the service dependency, security requirements, and performance constraints in the cloud. The problem was formalized as a Constraint Satisfaction Problem and solved using Satisﬁability Modulo Theories (SMT) solvers.</p>
-      <h4>(d) SensorChecker-- Configuration Verification of Wireless Sensor Network:</h4>
-      <p>In this project, we developed static analysis techniques to verify the coverage and the delivery of sensors’ activities based on WSN configurations such as forwarding information and awake/dormant sensor schedule generated by WSN protocols and algorithms. Our contribution is two-fold. First, we create a scalable model that represents the end-to-end reachability and the network coverage behavior of WSN based on sensor configuration using Binary Decision Diagrams (BDDs) and Symbolic Model Checking, and then define generic reachability and coverage properties using Computational Tree Logic (CTL). Second, we encode the WSN topological information using Boolean functions to verify constraint-based reachability and coverage properties for mission-critical WSN, and show soundness and completeness. We implement this in a tool, called SensorChecker, and validate the scalability and performance of the system with very large sensor networks (10s of thousands of sensor nodes) and wakeup scheduling parameters. We developed a scalable formal approach for verifying the configurations of large-scale wireless sensor networks.</p>
-      <h4>(e) ACDChecker-- Verification of Active Cyber Defense [SafeConfig16]:</h4>
-      <p>Active Cyber Defense (ACD) is the capability of cyber systems to respond to threat or attacks automatically by dynamically reconfiguring cyber systems without any human assistance. ACDChecker is a project to verify the safety and effectiveness of ACD operation. ACDChecker provides a specification language to define the cyber mission, and ACD policies and it verifies if the ACD policies can be implemented effectively without jeopardizing the cyber mission at any point [SafeConfig16].</p>
-    
-      <h3>2.1. Automated Configuration Synthesis</h3>
-      <h4>(a) Metric-driven Multi-Layer Security Architecture & Configuration Synthesis [TPDC16, ICDCS13, NDSS13, INFOCOM10, CNS11]:</h4>
-      <p>Determining optimal security architectures, that specify the required countermeasures, device location and configuration, while considering the contention of various design constraints including risk, usability and cost has been the Holy Grail problem in cybersecurity for many years. This project was funded by NSA Science of Security Lablet to investigate formal method techniques and developed tools to synthesize security architecture specification and configuration considering risk, usability, and cost metrics [ICDCS13, NDSS13]. The proposed approach enables automatic identification and placement of multi-layer security controls (e.g., firewall, IDS, IPSec, NAT, Proxy, Sandboxing, and virtualization) to maximize/enforce isolation while considering connectivity, usability, and cost requirements. Our approach employs automated hypothesis generation and evaluation for refinement and validation of the synthesis results. Our framework also automates the placement of network security devices, deployment of the rules and the creation of external and internal Demilitarized Zones (DMZ) to increase isolation and security.</p>
-      <h4>(b) ThreatZoom— Automated Cyber Risk Mitigation [CNSM16]:</h4>
-      <p>The goal of this project is to identify the most cost-effective defense actions for reducing cyber risk due to software vulnerabilities or configuration weakness. ThreatZoom analyzes both XCCDF, end-host vulnerability scanning and compliance reports, and network configuration, and determine the global risk based on threat exposure and impact that we developed as new metrics for measuring cyber risk. ThreatZoom optimizes the cybersecurity return of investment (RoI) by considering local and global risk as well as the cost of elected counter-measures that include patching, blocking, inspecting, authentication, encrypting, and other fine-grain defense actions.</p>
-      <h4>(c) SensorPlanner-- Mission-oriented Resilient Configuration Synthesis for Wireless Sensor Networks:</h4>
-      <p>In this work, we developed an automated synthesis technique for correct and yet resilient “distributed” sensor configurations including placement, sampling rate, power management, orientation, communication/forwarding, etc to guarantee sensing/monitoring coverage and reporting of events as stated in the mission requirements, while satisfying security, such as communication credentials, and resiliency requirements with the existence of failures or malicious sensors. Our formal approach is based on Satisfiability Modulo Theories (SMT) to find a satisfying coverage and reachability configurations to execute the mission. The presented approaches were implemented using Yices SMT Solver and evaluated extensively to show the feasibility and scalability of deploying our solutions in real-life WSN. As a case study, we consider multi-mode sensor PTZ cameras for surveillance applications.</p>
+      <ul>
+        <li>“Analytics of Cyber Threat Intelligence”, FS-ISAC, Oct 2017.</li>
+        <li>“Building a Cyber Risk Appetite Framework”, SINET CISO Workshop for major companies, Jan 2017</li>
+        <li>“Cybersecurity Innovation”, SINET Invited talk in Silicon Valley, CA, November 2016.</li>
+        <li>“Towards Science of Cyber Agility”, Invited talk, Clemson University. December 2016.</li>
+        <li>“Cyber Mutation for Moving Target Defense: Metrics, Techniques and Future Directions”, Keynote Talk in ACM Moving Target Defense Workshop, ACM CCS Workshop, October 2016.</li>
+        <li>“A Tutorial on Moving Target Defense Research”, IIT, India, July 2016.</li>
+        <li>“A Tutorial on Smart Grid Security and Resiliency Research”, IIT, India, July 2016.</li>
+        <li>“Active Cyber Deception”, invited talk in ARO workshop on Cyber Deception, July 2015.</li>
+        <li> “Measuring the Effectiveness of Moving Target Defense- Metrics, Methodologies and Experiences “, Invited talk in the AR Workshop on Measurement of MTD, September 2016.</li>
+        <li> “10 Reasons for Asymmetry in Cyber Warfare”, UNC Charlotte Cybersecurity Symposium, October 2016</li>
+        <li> “Cybersecurity Automation: The Path from Sense Making to Decision Making”, Invited talk in the seminar of NSA National Centers of Academic Excellence on Cyber Defense, December 2015.</li>
+        <li>“Resiliency-in-Depth for Cyber and Cyber-Physical System”, Pacific Northwest National Lab (PNNL), 2015.</li>
+        <li> “Active Cyber Deception”, invited talk in ARO workshop on Cyber Deception, July 2015.</li>
+        <li>“Cyber Resiliency: Current and Future Research Direction”, Office of Science and Technology Policy (OSTP), White House, December 2014 (briefing).</li>
+        <li>“Science of Security Design Synthesis”, NSA Science of Security Lablet, NCSU, May 2013.</li>
+        <li>“Automated Security Configuration Hardening and Obfuscation”, NSF US/Egypt Workshop on Cyber Security, Cairo, Egypt, June 2013.</li>
+        <li>“Moving target Defense: Metrics and Approaches”, NSF Middle East Workshop on Distributed Systems, Istanbul, Turkey, June 2012.</li>
+        <li>“Science of Security Configuration Automation”, IBM Watson, April 2012.</li>
+        <li>“Science of Security Configuration Analytics”, Applied Communication Sciences, May 2012</li>
+        <li>“Security Configuration Analytics Using Formal Methods”, Bell labs, May 2012</li>
+        <li>“The Dilemma of Security Analytics”, IBM Research Triangle Park, September 2012</li>
+        <li>“Non-invasive Smart Grid Threat Analyzer using Formal Methods”, NSF/IFIP Smart Planet Workshop and 59th Meeting of the IFIP 10.4 Working Group on Dependable Computing and Fault Tolerance, Jan 2011.</li>
+        <li>“CyberDNA— Commotional Analytics for Security Configuration Verification”, North Carolina State University, February 2011</li>
+        <li>“Non-invasive Threat/Vulnerability Analysis for Smart Grid Networks”, DIMACS Workshop on Algorithmic Decision Theory for the Smart Grid, Rutgers University, Oct 2010.</li>
+        <li>“Mutable Networks for Moving Target Defense”, ARO Workshop for Moving Target Defense, Oct 2010.</li>
+        <li>“Automated Management of Security Access Control from Design to Enforcement”, ACM Symposium on Access Control Models and Technologies (SACMAT), Keynote Speaker, June 2010</li>
+        <li>“Theory and Applications of Binary Decision Diagrams on Network Configuration Verification”, Princeton University, April 2009</li>
+        <li>“Distributed Event Correlation for Infrastructure Monitoring”, USA-India NSF Workshop on Infrastructure Security, January 2010.</li>
+        <li>“GENI Security Configuration In a Box”, NSF GENI Workshop, University of California Davis, January 2009</li>
+        <li>“Community-based Overlay Fault Diagnosis”, Georgia Institute of Technology, Oct 2009</li>
+        <li>“Network Security Auto-configurations: Top-down and Bottom-up Approaches”, BBN, July 2008</li>
+        <li>“Assurable and Usable Security Configuration – Looking  Forward“, NSF SafeConfig Workshop, August 2008</li>
+        <li>“Toward Assurable and Robust Network Security Configurations”, Boston University, July 2008</li>
+        <li>“Toward On-line Network Configuration  Debugging”, Yale University, July 2008</li>
+        <li>“A Commotional and Verifiable Modeling for Network Security Configurations”, USENIX Configuration Workshop, LISA, November 2007</li>
+        <li>“Toward Assurable and Robust Network Security Configurations “, University of Iowa, November 2007</li>
+        <li>“Future Direction in Security & Forensic Management Research”, NSF Cyber Trust Future Direction Workshop, (invited as Lead Researcher in this area), October 2006</li>
+        <li>“The 5 Challenges  Towards Automated Security Management”,  NSF Safe Computing Workshop, Sandia National Labs, December 2006</li>
+        <li>“Toward Autonomic Security Policy Management”, Purdue University, Aug 2006</li>
+        <li>“Toward Next-Generation Security Policy”, Intel Research, March 2006</li>
+        <li>“On Statistical Filtering  for Firewall Policy Optimization”, Northwestern University, March 2006</li>
+        <li>“Network Security Policy Verification and Optimization ”, Georgia Institute of Technology, Oct 2005</li>
+        <li>“Management of Network Security Policies Between Crises and Fantasies ”, University of Illinois at Urbana-Champaign (UIUC),  September 2005</li>
+        <li>“Policy-based Enterprise Security Solutions”, Cisco Security Team, San Jose, Oct. 2004</li>
+        <li>“Next-generation Firewall”, Cisco Workshop on Network Security, San Jose, Nov. 2003</li>
+        <li>“Tightening Your Firewall Security”, CTI Security Seminar, DePaul University, Oct. 2003</li>
+        <li>“The Role of Multicasting in Supporting Event Correlation”, Networking 2000, Paris, May 2000</li>
+        <li>“Emerging Technologies for A Networked Society”, IT Puerto Rico Government Summit, March 2000</li>
+      </ul>
     </div>
     <!-- Add more projects -->
   </section>
