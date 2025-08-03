@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Publications - Dr. Ehab Alshaer</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .nav-buttons {
+      display: flex;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .nav-buttons button {
+      padding: 8px 16px;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #0059b3;
+    }
+  </style>
+  <script>
+    function searchGoogleScholarByKeyword(keyword) {
+      const author = '"Ehab Alshaer"';
+      const query = encodeURIComponent(`author:${author} ${keyword}`);
+      const searchUrl = `https://scholar.google.com/scholar?q=${query}`;
+      window.open(searchUrl, "_blank");
+    }
+
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Site Title -->
+  <div class="site-title">Dr. Ehab Alshaer's Publications</div>
+  <div class="separator-line"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="custom-navbar">
+    <a href="index.html">Back to Main Page</a>
+  </nav>
+
+  <!-- Internal Navigation Buttons -->
+  <div class="nav-buttons">
+    <button onclick="scrollToSection('all-publications')">All Publications</button>
+    <button onclick="scrollToSection('by-theme')">By Theme</button>
+    <button onclick="scrollToSection('by-topic')">By Topic</button>
+  </div>
+
+  <!-- Section 1: Direct Links -->
+  <section id="all-publications">
+    <h2>Find All Publications</h2>
+    <p>Click on any icon to view all publications:</p>
+    <a href="https://scholar.google.com/citations?user=3ewd8VwAAAAJ" target="_blank">
+      <img src="images/google-scholar.png" alt="Google Scholar" width="50">
+    </a>
+    <a href="https://dl.acm.org/profile/81397368279" target="_blank">
+      <img src="images/acm.png" alt="ACM" width="50">
+    </a>
+    <a href="https://ieeexplore.ieee.org/author/37283014700" target="_blank">
+      <img src="images/ieee.png" alt="IEEE" width="50">
+    </a>
+  </section>
+
+  <hr>
+
+  <!-- Section 2: By Themes -->
+  <section id="by-theme">
+    <h2>Find Publications by Theme</h2>
+
+    <button onclick="searchGoogleScholarByKeyword('firewalls security configuration smart grids IOT industry control systems SAT SMT BDDs')">
+      Formal Methods for Cybersecurity Verification
+    </button>
+
+    <button onclick="searchGoogleScholarByKeyword('firewalls cyber defense agents intrusion detection security control cybersecurity-specific language models moving target defense cyber deception NLP deep learning reinforcement learning')">
+      AI-empowered Cybersecurity
+    </button>
+
+    <button onclick="searchGoogleScholarByKeyword('Overlay networks Multicasting monitoring fault management network verification multimedia networking multimedia protocols')">
+      Networking
+    </button>
+
+    <button onclick="searchGoogleScholarByKeyword('monitoring network management fault management security management Overlay networks')">
+      Distributed Monitoring & Network Management
+    </button>
+  </section>
+
+  <hr>
+
+  <!-- Section 3: By Individual Topics -->
+  <section id="by-topic">
+    <h2>Find Publications by Specific Topics</h2>
+
+    <div class="topics-list">
+      <button onclick="searchGoogleScholarByKeyword('firewalls')">Firewalls</button>
+      <button onclick="searchGoogleScholarByKeyword('smart grids')">Smart Grids</button>
+      <button onclick="searchGoogleScholarByKeyword('IOT')">IoT</button>
+      <button onclick="searchGoogleScholarByKeyword('SAT')">SAT</button>
+      <button onclick="searchGoogleScholarByKeyword('SMT')">SMT</button>
+      <button onclick="searchGoogleScholarByKeyword('BDD')">BDDs</button>
+      <button onclick="searchGoogleScholarByKeyword('cyber deception')">Cyber Deception</button>
+      <button onclick="searchGoogleScholarByKeyword('NLP')">NLP</button>
+      <button onclick="searchGoogleScholarByKeyword('network management')">Network Management</button>
+      <button onclick="searchGoogleScholarByKeyword('multicasting')">Multicasting</button>
+      <button onclick="searchGoogleScholarByKeyword('security control')">Security Control</button>
+      <button onclick="searchGoogleScholarByKeyword('overlay networks')">Overlay Networks</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dr. Ehab Alshaer. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
