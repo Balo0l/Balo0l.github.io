@@ -174,3 +174,26 @@ footer {
   background: #003366;
   color: white;
 }
+
+
+/* ICONS SECTION ON PUBLICATIONS PAGE */
+.publication-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;               /* even space between icons */
+  flex-wrap: wrap;         /* wrap on small screens */
+  margin: 30px 0;
+}
+
+.publication-icons img {
+  width: 100px;            /* adjust to desired size */
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.publication-icons img:hover {
+  transform: scale(1.1);   /* optional: zoom effect */
+}
+
