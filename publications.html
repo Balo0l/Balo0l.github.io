@@ -25,18 +25,16 @@
     }
   </style>
   <script>
-  function searchGoogleScholarByKeyword(keywordGroup) {
+  function searchGoogleScholarByKeywords(keywordsArray) {
     const author = 'author:"Ehab Alshaer"';
-    const query = `${author} (${keywordGroup})`;
-    const encodedQuery = encodeURIComponent(query);
+    const keywordsQuery = keywordsArray.join(' OR ');
+    const fullQuery = `${author} (${keywordsQuery})`;
+    const encodedQuery = encodeURIComponent(fullQuery);
     const searchUrl = `https://scholar.google.com/scholar?q=${encodedQuery}`;
     window.open(searchUrl, "_blank");
   }
-
-  function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-  }
 </script>
+
 </head>
 <body>
 
@@ -78,19 +76,19 @@
   <section id="by-theme">
     <h2>Find Publications by Theme</h2>
 
-    <button onclick="searchGoogleScholarByKeyword('firewalls security configuration smart grids IOT industry control systems SAT SMT BDDs')">
+    <button onclick="searchGoogleScholarByKeyword(['firewalls', 'security configuration', 'smart grids', 'IOT', 'industry control systems', 'SAT', 'SMT', 'BDDs'])">
       Formal Methods for Cybersecurity Verification
     </button>
 
-    <button onclick="searchGoogleScholarByKeyword('firewalls cyber defense agents intrusion detection security control cybersecurity-specific language models moving target defense cyber deception NLP deep learning reinforcement learning')">
+    <button onclick="searchGoogleScholarByKeyword(['firewalls', 'cyber defense agents', 'intrusion detection', 'security control', 'cybersecurity-specific language models', 'moving target defense', 'cyber deception', 'NLP', 'deep learning', 'reinforcement learning'])">
       AI-empowered Cybersecurity
     </button>
 
-    <button onclick="searchGoogleScholarByKeyword('Overlay networks Multicasting monitoring fault management network verification multimedia networking multimedia protocols')">
+    <button onclick="searchGoogleScholarByKeyword(['Overlay networks', 'Multicasting', 'monitoring', 'fault management', 'network verification', 'multimedia networking', 'multimedia protocols'])">
       Networking
     </button>
 
-    <button onclick="searchGoogleScholarByKeyword('monitoring network management fault management security management Overlay networks')">
+    <button onclick="searchGoogleScholarByKeyword(['monitoring', 'network management', 'fault management', 'security management', 'Overlay networks'])">
       Distributed Monitoring & Network Management
     </button>
   </section>
