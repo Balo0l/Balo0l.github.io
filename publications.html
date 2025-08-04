@@ -25,17 +25,18 @@
     }
   </style>
   <script>
-    function searchGoogleScholarByKeyword(keyword) {
-      const author = 'Ehab Alshaer';
-      const query = encodeURIComponent(`${author} ${keyword}`);
-      const searchUrl = `https://scholar.google.com/scholar?q=${query}`;
-      window.open(searchUrl, "_blank");
-    }
+  function searchGoogleScholarByKeyword(keywordGroup) {
+    const author = 'author:"Ehab Alshaer"';
+    const query = `${author} (${keywordGroup})`;
+    const encodedQuery = encodeURIComponent(query);
+    const searchUrl = `https://scholar.google.com/scholar?q=${encodedQuery}`;
+    window.open(searchUrl, "_blank");
+  }
 
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
 </head>
 <body>
 
