@@ -26,7 +26,7 @@
   </style>
   <script>
     function searchGoogleScholarByKeyword(keyword) {
-      const author = '"Ehab Alshaer"';
+      const author = 'Ehab Alshaer';
       const query = encodeURIComponent(`${author} ${keyword}`);
       const searchUrl = `https://scholar.google.com/scholar?q=${query}`;
       window.open(searchUrl, "_blank");
@@ -48,25 +48,19 @@
     <a href="index.html">Back to Main Page</a>
   </nav>
 
-  <!-- Internal Navigation Buttons -->
-  <div class="nav-buttons">
-    <button onclick="scrollToSection('all-publications')">All Publications</button>
-    <button onclick="scrollToSection('by-theme')">By Theme</button>
-    <button onclick="scrollToSection('by-topic')">By Topic</button>
-  </div>
 
   <!-- Section 1: Direct Links -->
   <section id="all-publications">
     <h2>Find All Publications</h2>
     <p>Click on any icon to view all publications:</p>
     <a href="https://scholar.google.com/citations?user=3ewd8VwAAAAJ" target="_blank">
-      <img src="images/google-scholar.png" alt="Google Scholar" width="50">
+      <img src="googleScholar.png" alt="Google Scholar" width="50">
     </a>
     <a href="https://dl.acm.org/profile/81397368279" target="_blank">
-      <img src="images/acm.png" alt="ACM" width="50">
+      <img src="acmDL.png" alt="ACM" width="50">
     </a>
     <a href="https://ieeexplore.ieee.org/author/37283014700" target="_blank">
-      <img src="images/ieee.png" alt="IEEE" width="50">
+      <img src="ieee.png" alt="IEEE" width="50">
     </a>
   </section>
 
