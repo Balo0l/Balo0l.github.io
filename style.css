@@ -215,4 +215,6 @@ footer {
 .small-text {
   font-size: 0.85rem;
   line-height: 1.4;
+  white-space: pre-line;
+
 }
