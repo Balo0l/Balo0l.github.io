@@ -69,36 +69,20 @@ nav a:hover {
 
 
 /* LEFT SIDE OF PROFILE */
-.profile-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 0 0 200px;
-  gap: 20px;
-}
-
 /* Profile picture */
 .profile-pic {
-  width: 180px;
-  height: 180px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   border-radius: 20%;
-  object-fit: cover;
-  border: 4px solid #fff;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Icons BELOW profile picture */
-.icon-links-below {
-  margin-top: 10px;
+.left-section {
   display: flex;
-  gap: 12px;
+  flex-direction: column;
+  align-items: center; /* center horizontally */
   justify-content: center;
-}
-
-.icon-img-small {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
+  padding: 20px;
 }
 
 
