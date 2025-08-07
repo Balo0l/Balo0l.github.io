@@ -32,7 +32,7 @@
     const keywordsArray = Array.isArray(keywords) ? keywords : [keywords];
 
     const keywordsQuery = keywordsArray.join(' OR ');
-    const fullQuery = `${author} Abstract (${keywordsQuery})`;
+    const fullQuery = `${author} Abstract:(${keywordsQuery})`;
     const encodedQuery = encodeURIComponent(fullQuery);
     const searchUrl = `https://scholar.google.com/scholar?q=${encodedQuery}`;
     window.open(searchUrl, "_blank");
@@ -100,44 +100,44 @@
 
   <hr>
 
-<!-- Section 3: By Individual Topics -->
 <section id="by-topic">
   <h2>Find Publications by Specific Topics</h2>
 
   <div class="topics-container">
 
-    <!-- Category A: Cybersecurity -->
+    <!-- Cybersecurity -->
     <div class="topic-category">
       <h3>Cybersecurity</h3>
       <div class="topics-list">
         <button onclick="searchGoogleScholarByKeyword('firewalls')">Firewalls</button>
-        <button onclick="searchGoogleScholarByKeyword('"Access Control" "Configuration Verification" "Synthesis"')">Access Control, Configuration Verification & Synthesis</button>
-        <button onclick="searchGoogleScholarByKeyword('"Intrusion Detection"')">Intrusion Detection</button>
-        <button onclick="searchGoogleScholarByKeyword('"Adaptive Intrusion Response"')">Adaptive Intrusion Response</button>
-        <button onclick="searchGoogleScholarByKeyword('"Cyber Risk Analytics"')">Cyber Risk Analytics</button>
-        <button onclick="searchGoogleScholarByKeyword('"Threat Intelligence"')">Threat Intelligence</button>
-        <button onclick="searchGoogleScholarByKeyword('"Security Controls"')">Security Controls</button>
-        <button onclick="searchGoogleScholarByKeyword('"Cyber Physical Security" OR Resiliency OR "Smart Grids" OR IOT')">Cyber-Physical Security & Resiliency</button>
-        <button onclick="searchGoogleScholarByKeyword('"Cyber Deterrence"')">Cyber Deterrence</button>
-        <button onclick="searchGoogleScholarByKeyword('"Cyber Deception"')">Cyber Deception</button>
-        <button onclick="searchGoogleScholarByKeyword('"Text Analytics" OR "Language Models"')">Text Analytics & LMs</button>
-        <button onclick="searchGoogleScholarByKeyword('"Adaptive Cyber Defense"')">AI-empowered Adaptive Cyber Defense</button>
+        <button onclick="searchGoogleScholarByKeyword('Access Control')">Access Control</button>
+        <button onclick="searchGoogleScholarByKeyword(['Configuration Verification','Synthesis'])">Configuration Verification & Synthesis</button>
+        <button onclick="searchGoogleScholarByKeyword('Intrusion Detection')">Intrusion Detection</button>
+        <button onclick="searchGoogleScholarByKeyword('Intrusion Response')">Adaptive Intrusion Response</button>
+        <button onclick="searchGoogleScholarByKeyword('Cyber Risk')">Cyber Risk Analytics</button>
+        <button onclick="searchGoogleScholarByKeyword('Threat Intelligence')">Data Driven Threat Intelligence</button>
+        <button onclick="searchGoogleScholarByKeyword('Security Controls')">Security Controls</button>
+        <button onclick="searchGoogleScholarByKeyword(['Cyber Physical Security', 'Resiliency', 'Smart Grids', 'IOT'])">Cyber-Physical Security & Resiliency</button>
+        <button onclick="searchGoogleScholarByKeyword('Cyber Deterrence')">Cyber Deterrence</button>
+        <button onclick="searchGoogleScholarByKeyword('Cyber Deception')">Active Cyber Deception</button>
+        <button onclick="searchGoogleScholarByKeyword('Text Analytics Language Models')">Cybersecurity Text Analytics and Language Models</button>
+        <button onclick="searchGoogleScholarByKeyword('Adaptive Cyber Defense')">AI-empowered Adaptive Cyber Defense</button>
       </div>
     </div>
 
-    <!-- Category B: Domains -->
+    <!-- Domains -->
     <div class="topic-category">
       <h3>Domains</h3>
       <div class="topics-list">
-        <button onclick="searchGoogleScholarByKeyword('"Enterprise cybersecurity"')">Enterprise Cybersecurity</button>
-        <button onclick="searchGoogleScholarByKeyword('"Cloud security"')">Cloud Security</button>
-        <button onclick="searchGoogleScholarByKeyword('"Smart Grids"')">Smart Grids</button>
-        <button onclick="searchGoogleScholarByKeyword('"IOT"')">IoT</button>
-        <button onclick="searchGoogleScholarByKeyword('"Industry Control Systems"')">Industry Control Systems</button>
+        <button onclick="searchGoogleScholarByKeyword('Enterprise cybersecurity')">Enterprise</button>
+        <button onclick="searchGoogleScholarByKeyword('Cloud security')">Clouds</button>
+        <button onclick="searchGoogleScholarByKeyword('Smart Grids')">Smart Grids</button>
+        <button onclick="searchGoogleScholarByKeyword('IOT')">IoT</button>
+        <button onclick="searchGoogleScholarByKeyword('Industry Control Systems')">Industry Control Systems</button>
       </div>
     </div>
 
-    <!-- Category C: Theoretical Foundations -->
+    <!-- Theoretical Foundations -->
     <div class="topic-category">
       <h3>Theoretical Foundations</h3>
       <div class="topics-list">
@@ -145,14 +145,15 @@
         <button onclick="searchGoogleScholarByKeyword('SMT')">SMT</button>
         <button onclick="searchGoogleScholarByKeyword('BDD')">BDD</button>
         <button onclick="searchGoogleScholarByKeyword('NLP')">NLP</button>
-        <button onclick="searchGoogleScholarByKeyword('"Language Models" OR LLM')">Language Models & LLM</button>
-        <button onclick="searchGoogleScholarByKeyword('"Deep Learning"')">Deep Learning</button>
-        <button onclick="searchGoogleScholarByKeyword('"Reinforcement Learning"')">Reinforcement Learning</button>
+        <button onclick="searchGoogleScholarByKeyword('Language Models')">Language Models</button>
+        <button onclick="searchGoogleScholarByKeyword('Deep Learning')">Deep Learning</button>
+        <button onclick="searchGoogleScholarByKeyword('Reinforcement Learning')">Reinforcement Learning</button>
       </div>
     </div>
 
   </div>
 </section>
+
 
   <footer>
     <p>&copy; 2025 Dr. Ehab Alshaer. All rights reserved.</p>
