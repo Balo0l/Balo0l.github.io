@@ -34,7 +34,7 @@
     const keywordsQuery = keywordsArray.join(' OR ');
     const fullQuery = ${author} Abstract:(${keywordsQuery});
     const encodedQuery = encodeURIComponent(fullQuery);
-    const searchUrl = https://scholar.google.com/scholar?q=${encodedQuery};
+    const searchUrl = 'https://scholar.google.com/scholar?q=${encodedQuery}';
     window.open(searchUrl, "_blank");
   }
 </script>
