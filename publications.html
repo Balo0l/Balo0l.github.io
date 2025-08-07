@@ -24,28 +24,17 @@
       background-color: #0059b3;
     }
   </style>
-<script>
+ <script>
   function searchGoogleScholarByKeyword(keywords) {
     const author = 'author:"Ehab Al-Shaer"';
 
-    let keywordsArray;
+    // Handle both a single keyword string or an array of keywords
+    const keywordsArray = Array.isArray(keywords) ? keywords : [keywords];
 
-    if (Array.isArray(keywords)) {
-      // Already an array — just quote each phrase
-      keywordsArray = keywords;
-    } else if (typeof keywords === 'string') {
-      // Split only by semicolons or commas, NOT spaces
-      keywordsArray = keywords.split(/;|,/).map(k => k.trim()).filter(k => k.length > 0);
-    } else {
-      keywordsArray = [];
-    }
-
-    // Add quotation marks around each keyword/phrase
-    const keywordsQuery = keywordsArray.map(k => `"${k}"`).join(' OR ');
-
-    const fullQuery = `${author} Abstract:(${keywordsQuery})`;
+    const keywordsQuery = keywordsArray.join(' OR ');
+    const fullQuery = ${author} Abstract:(${keywordsQuery});
     const encodedQuery = encodeURIComponent(fullQuery);
-    const searchUrl = `https://scholar.google.com/scholar?q=${encodedQuery}`;
+    const searchUrl = https://scholar.google.com/scholar?q=${encodedQuery};
     window.open(searchUrl, "_blank");
   }
 </script>
