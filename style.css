@@ -297,4 +297,33 @@ footer {
 }
 
 
+/* Table Styling */
+.lectures-table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.lectures-table th, .lectures-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.lectures-table th {
+  background-color: #002b5c;
+  color: white;
+}
+
+.lectures-table a {
+  color: #004080;
+  text-decoration: none;
+}
+
+.lectures-table a:hover {
+  text-decoration: underline;
+}
+
+
 
